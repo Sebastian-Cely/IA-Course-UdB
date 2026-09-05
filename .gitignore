@@ -1,16 +1,14 @@
-# Byte-compiled / optimized / DLL files
-u1/
-fundam/
-u2/
 taller_u2_solved.ipynb
-u3/
-u3rec/
-u3slides/
-u4/
-u5/
-pycaret/
-slides/
 .vscode/
+
+# macOS
+.DS_Store
+
+# Modelos entrenados / artefactos regenerables (ej. PyCaret save_model())
+*.pkl
+
+# Hoja de ruta de ajustes del repo (excepción explícita)
+!ajustes.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
