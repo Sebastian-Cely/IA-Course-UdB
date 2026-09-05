@@ -23,50 +23,50 @@ Marca `[x]` cuando un ítem quede corregido.
 
 ## B. Unidad 1
 
-- [ ] **B1.** "McCarthy, 1856" → debe ser 1956 (`1_Introducción.ipynb`).
-- [ ] **B2.** Inconsistencia: `var = "!Hola Python!"` debería imprimir `"¡Hola Python!"` según el texto.
-- [ ] **B3.** Enlace de Colab mal formado: `[colab.research.google.com](colab.research.google.com)` sin `https://`.
-- [ ] **B4.** Typos: `</spam>` → `</span>` (`2_python_basics.ipynb`); "correpsondiente", "el el acceso" (`1_Introducción.ipynb`).
-- [ ] **B5.** Outputs guardados con errores reales en `5_pydantic.ipynb` (celda 2) y `1_notebooks.ipynb` (celda 18).
-- [ ] **B6.** `4_async_python.ipynb` muy escueto; no aclara que el `await` a nivel de celda es exclusivo de Jupyter.
-- [ ] **B7.** Comentario menciona librería `openai` cuando el código usa `agents` (openai-agents SDK).
+- [x] **B1.** "McCarthy, 1856" → debe ser 1956 (`1_Introducción.ipynb`). *(Ya quedó corregido al reescribir esa celda durante A10.)*
+- [x] **B2.** Inconsistencia: `var = "!Hola Python!"` debería imprimir `"¡Hola Python!"` según el texto. *(Corregido; el output guardado quedó limpio, se re-ejecutará al abrir el notebook.)*
+- [x] **B3.** Enlace de Colab mal formado: `[colab.research.google.com](colab.research.google.com)` sin `https://`. *(Corregido como efecto colateral de A11.)*
+- [x] **B4.** Typos: `</spam>` → `</span>` (`2_python_basics.ipynb`); "correpsondiente", "el el acceso" (`1_Introducción.ipynb`).
+- [x] **B5.** Outputs guardados con errores reales en `5_pydantic.ipynb` (celda 2) y `1_notebooks.ipynb` (celda 18). *(Limpiados, incluida la ruta personal filtrada en la celda de `%pwd` adyacente. De paso se corrigió el comentario engañoso que decía que `%ls`/`%pwd` eran "para Windows" — en realidad son magics de IPython que funcionan igual en cualquier SO.)*
+- [x] **B6.** `4_async_python.ipynb` muy escueto; no aclara que el `await` a nivel de celda es exclusivo de Jupyter. *(Se agregaron 7 celdas markdown explicativas: intro sobre asyncio/event loop, nota destacada sobre `await` top-level siendo exclusivo de Jupyter/IPython (con el equivalente `asyncio.run(main())` para scripts), y una explicación después de cada bloque de código sobre qué pasó y por qué. De paso se limpió un output con ruta personal filtrada en el ejemplo del `RuntimeWarning`.)*
+- [x] **B7.** Comentario menciona librería `openai` cuando el código usa `agents` (openai-agents SDK). *(Ubicado en `3_python_intermedio.ipynb`, celda `71008ea5`; corregido a "openai-agents".)*
 
 ## C. Unidad 2
 
-- [ ] **C1.** Rutas de imagen rotas con backslashes de Windows en `1_buscar-estados-ia.ipynb` (`..\Unidad 2\assets\...` → `assets/...`).
-- [ ] **C2.** Typos varios: "correpsondiente", "compejidad", "uan rama", "anteirormente", "Algorimtos", "herística", "definira"/"el cúal", "valiendose", "argegar", "panatlla", "implmentación".
-- [ ] **C3.** Rúbrica de `taller_u2.ipynb`: "Narrativa y Evidencias (Vibe Coding)" pesa 40%, más que Implementación (20%) y Algoritmos (15%) juntas — confirmar si es intencional.
-- [ ] **C4.** (Menor) `app.py`: si el humano gana/empata, el panel "¿Cómo evaluó la IA su última jugada?" muestra el análisis del turno anterior.
+- [x] **C1.** Rutas de imagen rotas con backslashes de Windows en `1_buscar-estados-ia.ipynb` (`..\Unidad 2\assets\...` → `assets/...`).
+- [x] **C2.** Typos varios: "correpsondiente", "compejidad", "uan rama", "anteirormente", "Algorimtos", "herística", "definira"/"el cúal", "valiendose", "argegar", "panatlla", "implmentación".
+- [x] **C3.** Rúbrica de `taller_u2.ipynb`: "Narrativa y Evidencias (Vibe Coding)" pesa 40%, más que Implementación (20%) y Algoritmos (15%) juntas — confirmar si es intencional. *(Resuelto eliminando el taller completo del repositorio, a pedido explícito, en vez de reequilibrar la rúbrica. Se quitó `Unidad 2/taller_u2.ipynb` — `git rm` — y su referencia en el README.)*
+- [x] **C4.** (Menor) `app.py`: si el humano gana/empata, el panel "¿Cómo evaluó la IA su última jugada?" muestra el análisis del turno anterior. *(Corregido: `last_root` se limpia a `None` en ese caso para ocultar el panel obsoleto.)*
 
 ## D. Unidad 3
 
-- [ ] **D1.** `use_label_encoder=False` en `XGBClassifier` — parámetro obsoleto/eliminado.
-- [ ] **D2.** `%pip install xgboost` / `%pip install pycaret` con output guardado `No module named pip`.
-- [ ] **D3.** PyCaret + `numpy==2.3.4` fijado: riesgo de conflicto de dependencias; falta advertencia de entorno separado.
-- [ ] **D4.** Leyenda cruzada en gráfico de California Housing ("Valor Real" / "Predicciones del Modelo" invertidas).
-- [ ] **D5.** Tabla de ejemplo (Precio 100/150/200) vs. código (`y = [100000, 150000, 200000]`) — aclarar unidades.
-- [ ] **D6.** `slides demo/5-data-preprocessing.ipynb`: ejemplo de estandarización usa la misma media/desviación para Altura y Peso (250/1), no realista.
-- [ ] **D7.** `pLluviaNublado` en `3-teorema-bayes.ipynb` en realidad guarda `P(nublado|lluvia)` — nombre engañoso.
-- [ ] **D8.** Web scraping de basketball-reference.com sin headers — puede dar 403 intermitente; ya existe `nba2019.csv` como alternativa.
-- [ ] **D9.** Rutas absolutas personales filtradas en outputs guardados (incluye un `dir` completo del disco en `2-python-EDA.ipynb`).
-- [ ] **D10.** Typos: "librearías", "valore reales", "Párametros", "Prepocesamiento", "porbabilidad". Tags rotos `<spam>` → `<span>` en `1_ML_implementation.ipynb`, `<span>` sin cerrar en `4-análisis-exploratorio-datos-EDA.ipynb`.
-- [ ] **D11.** `KMeans` sin `n_init` explícito; `RandomForestClassifier()` sin `random_state` en un CV.
+- [x] **D1.** `use_label_encoder=False` en `XGBClassifier` — parámetro obsoleto/eliminado. *(Eliminado del código.)*
+- [x] **D2.** `%pip install xgboost` / `%pip install pycaret` con output guardado `No module named pip`. *(Outputs limpiados.)*
+- [x] **D3.** PyCaret + `numpy==2.3.4` fijado: riesgo de conflicto de dependencias; falta advertencia de entorno separado. *(Se agregó nota explícita recomendando entorno virtual dedicado para PyCaret.)*
+- [x] **D4.** Leyenda cruzada en gráfico de California Housing ("Valor Real" / "Predicciones del Modelo" invertidas). *(Corregido usando `label=` directo en scatter/plot.)*
+- [x] **D5.** Tabla de ejemplo (Precio 100/150/200) vs. código (`y = [100000, 150000, 200000]`) — aclarar unidades. *(Tabla actualizada a valores completos en USD.)*
+- [x] **D6.** `slides demo/5-data-preprocessing.ipynb`: ejemplo de estandarización usa la misma media/desviación para Altura y Peso (250/1), no realista. *(Cambiado a Altura: loc=170/scale=10, Peso: loc=70/scale=15.)*
+- [x] **D7.** `pLluviaNublado` en `3-teorema-bayes.ipynb` en realidad guarda `P(nublado|lluvia)` — nombre engañoso. *(Renombrado a `pNubladoDadoLluvia`.)*
+- [x] **D8.** Web scraping de basketball-reference.com sin headers — puede dar 403 intermitente; ya existe `nba2019.csv` como alternativa. *(Se agregó header `User-Agent` y fallback automático a `nba2019.csv` si falla la solicitud.)*
+- [x] **D9.** Rutas absolutas personales filtradas en outputs guardados (incluye un `dir` completo del disco en `2-python-EDA.ipynb`). *(Outputs limpiados en `1_ML_implementation.ipynb` y `2-python-EDA.ipynb`; verificado que no quedan rutas `Users\sebas` en ningún notebook del repo.)*
+- [x] **D10.** Typos: "librearías", "valore reales", "Párametros", "Prepocesamiento", "porbabilidad". Tags rotos `<spam>` → `<span>` en `1_ML_implementation.ipynb`, `<span>` sin cerrar en `4-análisis-exploratorio-datos-EDA.ipynb`.
+- [x] **D11.** `KMeans` sin `n_init` explícito; `RandomForestClassifier()` sin `random_state` en un CV. *(`n_init="auto"` y `random_state=42` agregados respectivamente.)*
 
 ## E. Unidad 4
 
-- [ ] **E1.** Sección "Transformers" vacía conceptualmente (solo instala `transformers` y corre GPT-2, sin explicar atención).
-- [ ] **E2.** `IA_Moderna.ipynb` con poco texto explicativo del "por qué"; nunca se referencia con `computer-vision.ipynb`.
-- [ ] **E3.** Comentario técnico incorrecto en `computer-vision.ipynb` (celda 60): el `-1` de `cv2.filter2D` es `ddepth`, no tiene relación con canales.
-- [ ] **E4.** Error de traducción: "sumar" aparece como "resumir" en la explicación de convolución.
-- [ ] **E5.** LSTM a nivel de carácter con corpus mínimo (~500 caracteres) genera texto roto sin nota de overfitting esperado.
-- [ ] **E6.** Patrón de Keras desactualizado: `input_shape` en la primera capa (usar `Input(shape=...)`).
-- [ ] **E7.** Imágenes embebidas como base64 en el markdown de `computer-vision.ipynb` (~20 celdas, infla el notebook a 4.6 MB).
-- [ ] **E8.** Typos: "prediccíón", "HugginFace", "Concéptos", "tercer dimensión" (→ "tercera"), "coordendas".
+- [x] **E1.** Sección "Transformers" vacía conceptualmente (solo instala `transformers` y corre GPT-2, sin explicar atención). *(Se agregó explicación de self-attention, paralelización, dependencias de largo alcance, embeddings posicionales y qué es GPT-2 como Transformer decoder-only.)*
+- [x] **E2.** `IA_Moderna.ipynb` con poco texto explicativo del "por qué"; nunca se referencia con `computer-vision.ipynb`. *(Se agregaron notas conceptuales en ANN (ReLU/softmax), CNN (referencia cruzada a computer-vision.ipynb) y RNN (por qué LSTM vs. RNN simple / vanishing gradient).)*
+- [x] **E3.** Comentario técnico incorrecto en `computer-vision.ipynb` (celda 60): el `-1` de `cv2.filter2D` es `ddepth`, no tiene relación con canales. *(Comentario corregido.)*
+- [x] **E4.** Error de traducción: "sumar" aparece como "resumir" en la explicación de convolución. *(Corregido, y se quitó un punto final duplicado.)*
+- [x] **E5.** LSTM a nivel de carácter con corpus mínimo (~500 caracteres) genera texto roto sin nota de overfitting esperado. *(Nota agregada explicando el sobreajuste esperado por corpus insuficiente.)*
+- [x] **E6.** Patrón de Keras desactualizado: `input_shape` en la primera capa (usar `Input(shape=...)`). *(Corregido en las 4 arquitecturas: ANN, CNN, RNN-serie temporal y LSTM de texto.)*
+- [x] **E7.** Imágenes embebidas como base64 en el markdown de `computer-vision.ipynb` (~20 celdas, infla el notebook a 4.6 MB). *(18 imágenes extraídas a `Unidad 4/assets/cv-img-01.png`...`18.png`; notebook bajó de 4.6MB a 1.1MB. Verificada la integridad de al menos una imagen extraída.)*
+- [x] **E8.** Typos: "prediccíón", "HugginFace", "Concéptos", "tercer dimensión" (→ "tercera"), "coordendas". *(Todos corregidos: "Concéptos"/"coordendas"/"tercer dimensión" en `computer-vision.ipynb`; "prediccíón"/"HugginFace" en `IA_Moderna.ipynb`.)*
 
 ## F. Unidad 5
 
-- [ ] **F1.** `model="gemini-3.5-flash"` — ID de modelo que probablemente no existe; verificar el ID vigente.
-- [ ] **F2.** Falta `langchain-classic` en el `!pip install` de la celda de dependencias, pero el código lo importa.
-- [ ] **F3.** `llm_with_stop = llm.bind(stop=["Observation"])` se define pero nunca se usa.
-- [ ] **F4.** Output guardado con error de Windows ("pip no se reconoce...") en la celda de instalación.
-- [ ] **F5.** Typo en docstring: un `#` residual antes de `Returns:`.
+- [x] **F1.** `model="gemini-3.5-flash"` — ID de modelo que probablemente no existe; verificar el ID vigente. *(Resuelto: era un cambio sin commitear del usuario, no del repo; los outputs guardados confirman que el modelo sí funciona. Se deja como está.)*
+- [x] **F2.** Falta `langchain-classic` en el `!pip install` de la celda de dependencias, pero el código lo importa. *(Agregado.)*
+- [x] **F3.** `llm_with_stop = llm.bind(stop=["Observation"])` se define pero nunca se usa. *(`create_react_agent` ahora usa `llm_with_stop` en vez de `llm`; se limpió el output de la celda de ejecución por quedar desactualizado con este cambio.)*
+- [x] **F4.** Output guardado con error de Windows ("pip no se reconoce...") en la celda de instalación. *(Limpiado.)*
+- [x] **F5.** Typo en docstring: un `#` residual antes de `Returns:`. *(Corregido.)*

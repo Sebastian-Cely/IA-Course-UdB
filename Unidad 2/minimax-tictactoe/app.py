@@ -166,6 +166,10 @@ def handle_human_click(i, dificultad):
     board[i] = st.session_state.human_symbol
     winner = mm.check_winner(board)
     if winner or mm.is_full(board):
+        # La IA no llega a mover, así que no hay "última jugada de la IA"
+        # que analizar: se limpia para no mostrar el panel con datos
+        # obsoletos del turno anterior.
+        st.session_state.last_root = None
         finish_game(winner)
         return
     move, root = get_ai_move(board, st.session_state.ai_symbol,

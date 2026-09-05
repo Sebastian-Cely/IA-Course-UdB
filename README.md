@@ -36,7 +36,6 @@ Cada unidad asume que ya viste el material correspondiente en el sitio Canva.
 ### Unidad 2 — Búsqueda en espacios de estados
 
 - [Unidad 2/1_buscar-estados-ia.ipynb](Unidad%202/1_buscar-estados-ia.ipynb): representación formal de estados; **BFS**, **DFS** y **A\*** (heurística de Manhattan) sobre el **8-puzzle**.
-- [Unidad 2/taller_u2.ipynb](Unidad%202/taller_u2.ipynb): taller de evacuación / vehículo autónomo (espacio de estados, algoritmos, rúbrica). Entrega: notebook + carpeta `assets` en un comprimido.
 - [Unidad 2/minimax-tictactoe/](Unidad%202/minimax-tictactoe/): aplicación **Streamlit** de Minimax en tres en raya (dificultad aleatoria, fácil y perfecta).
 
 Para el demo:
