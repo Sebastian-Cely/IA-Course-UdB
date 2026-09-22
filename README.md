@@ -2,12 +2,6 @@
 
 Contenido teórico-práctico de la asignatura **Inteligencia Artificial** del programa de Ingeniería de Sistemas de la **Universidad de Boyacá**.
 
-La parte práctica vive en este repositorio (notebooks Jupyter y un demo interactivo). La teoría de cada unidad está en el sitio del curso:
-
-**[AI UdB Course](https://ai-course-udb.my.canva.site/#home)**
-
-2026
-
 ## Cómo usar este repositorio
 
 1. Clona el repositorio.
@@ -36,7 +30,7 @@ Cada unidad asume que ya viste el material correspondiente en el sitio Canva.
 
 ### Unidad 2 — Búsqueda en espacios de estados
 
-- [Unidad 2/1_buscar-estados-ia.ipynb](Unidad%202/1_buscar-estados-ia.ipynb): representación formal de estados; **BFS**, **DFS** y **A\*** (heurística de Manhattan) sobre el **8-puzzle**.
+- [Unidad 2/1_buscar-estados-ia.ipynb](Unidad%202/1_buscar-estados-ia.ipynb): representación formal de estados; **BFS**, **DFS** y **A** (heurística de Manhattan) sobre el **8-puzzle**.
 - [Unidad 2/minimax-tictactoe/](Unidad%202/minimax-tictactoe/): aplicación **Streamlit** de Minimax en tres en raya (dificultad aleatoria, fácil y perfecta).
 - `Unidad 2/Unidad 2 - Busqueda en Espacios de Estados.pptx`: diapositivas de apoyo para clase (21 diapositivas: representación de estados, BFS/DFS, A*/Voraz, comparación y Minimax), pensadas para exponer junto al notebook y la app, y como repaso para los estudiantes.
 
@@ -83,6 +77,7 @@ Igual que en la Unidad 3, la numeración sigue el orden narrativo (de los fundam
 - `Unidad 4/Unidad 4 - IA Moderna.pptx`: diapositivas de apoyo para clase (32 diapositivas, un bloque por notebook), con 21 gráficas reales extraídas directamente de las salidas ya ejecutadas de cada notebook (curvas de entrenamiento, matrices de confusión, filtros y mapas de activación de la CNN, comparación RNN/LSTM/GRU, matriz de atención, perplejidad, etc.), pensadas para exponer junto a los notebooks y como repaso para los estudiantes.
 
 
+
 ### Unidad 5 — Agentic AI
 
 Igual que en las unidades 3 y 4, la numeración sigue el orden narrativo. Requiere un archivo `.env` en `Unidad 5/` con `GOOGLE_API_KEY` (no subas claves al repositorio).
@@ -102,6 +97,8 @@ Igual que en las unidades 3 y 4, la numeración sigue el orden narrativo. Requie
 
 - [Cheat Sheet/Cheat Sheet.ipynb](Cheat%20Sheet/Cheat%20Sheet.ipynb): resumen de referencia rápida, transversal a todo el curso — sesgo y varianza, métricas de clasificación, PCA, teorema de Bayes, regresión, regularización, bloques y arquitecturas de CNN, ensambles, y estructuras de datos (pila, cola, árbol, grafo, tabla hash). No es una unidad nueva, sino un mapa de fórmulas y demostraciones visuales para consulta puntual.
 - `Cheat Sheet/Cheat Sheet.pptx`: la misma referencia en formato de diapositivas (41 diapositivas, con las mismas figuras y tablas del notebook), pensada para exponer en sesiones de clase y como material de repaso para los estudiantes.
+
+
 
 ## Requisitos típicos
 
